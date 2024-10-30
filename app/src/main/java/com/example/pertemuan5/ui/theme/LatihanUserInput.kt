@@ -126,22 +126,22 @@ fun LatihanUserInput(modifier: Modifier = Modifier) {
                 )
                 TampilData(
                     judul = "jenisk",
-                    isinya =
+                    isinya = dataJenisK
 
                 )
                 TampilData(
                     judul = "Email",
-                    isinya = "@iqbaldf"
+                    isinya = dataEmail
 
                 )
                 TampilData(
                     judul = "notelp",
-                    isinya = "0823"
+                    isinya = dataNotelp
 
                 )
                 TampilData(
                     judul = "alamat",
-                    isinya = "Margorukun"
+                    isinya = dataAlamat
 
                 )
             }

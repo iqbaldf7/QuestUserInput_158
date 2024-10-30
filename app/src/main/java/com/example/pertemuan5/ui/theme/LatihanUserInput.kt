@@ -41,14 +41,15 @@ fun LatihanUserInput(modifier: Modifier = Modifier) {
 
     var jenisK by remember { mutableStateOf("") }
     var dataJenisK by remember { mutableStateOf("") }
-    val dataK = listOf("L", "P")
+    val dataK = listOf("Laki laki", "Perempuan")
+
 
     Column (modifier = Modifier.fillMaxSize().padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally){
         Text(text = "Biodata",
             fontWeight = FontWeight.Bold,
             fontSize = 28.sp)
-        Spacer(modifier = Modifier.padding(20.dp))
+        Spacer(modifier = Modifier.padding(16.dp))
         TextField(
             value = nama,
             onValueChange = {nama = it},
@@ -87,7 +88,7 @@ fun LatihanUserInput(modifier: Modifier = Modifier) {
             onValueChange = {notelp = it},
             modifier = Modifier.fillMaxWidth().padding(5.dp),
             label = {
-                Text( text = "notelp")
+                Text( text = "Nomor HP")
             },
             placeholder = {
                 Text(text = "Masukan notelp Anda")
@@ -100,7 +101,7 @@ fun LatihanUserInput(modifier: Modifier = Modifier) {
             onValueChange = {alamat = it},
             modifier = Modifier.fillMaxWidth().padding(5.dp),
             label = {
-                Text( text = "alamat")
+                Text( text = "Alamat")
             },
             placeholder = {
                 Text(text = "Masukan Alamat Anda")

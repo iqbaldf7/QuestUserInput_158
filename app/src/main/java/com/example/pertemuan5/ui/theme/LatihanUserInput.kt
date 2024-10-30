@@ -39,7 +39,7 @@ fun LatihanUserInput(modifier: Modifier = Modifier) {
     var dataNotelp by remember { mutableStateOf("") }
     var dataAlamat by remember { mutableStateOf("") }
 
-    val  jenisK by remember { mutableStateOf("") }
+    var jenisK by remember { mutableStateOf("") }
     var dataJenisK by remember { mutableStateOf("") }
     val dataK = listOf("L", "P")
 
@@ -61,12 +61,13 @@ fun LatihanUserInput(modifier: Modifier = Modifier) {
             }
         )
         Row {
-            dataJenisK.forEach{ selectedJK ->
+            dataK.forEach{ selectedJK ->
                 Row {
-                    RadioButton(selected = jenisK = selectedJK,
+                    RadioButton(selected = jenisK == selectedJK,
                         onClick = {
                             jenisK = selectedJK
                         })
+                    Text(selectedJK)
                 }
             }
         }
@@ -111,22 +112,40 @@ fun LatihanUserInput(modifier: Modifier = Modifier) {
             dataEmail = email
             dataNotelp = notelp
             dataAlamat = alamat
-                         }, modifier = Modifier.padding(vertical = 10.dp)) {
+                         },
+            modifier = Modifier.padding(vertical = 10.dp)) {
             Text(text = "Simpan")
         }
         Card(modifier = Modifier.fillMaxSize().padding(16.dp)) {
             Column {
                 TampilData(
                     judul = "Nama",
-                    isinya = "ibal"
+                    isinya = dataNama
+
+
+                )
+                TampilData(
+                    judul = "jenisk",
+                    isinya =
+
+                )
+                TampilData(
+                    judul = "Email",
+                    isinya = "@iqbaldf"
+
+                )
+                TampilData(
+                    judul = "notelp",
+                    isinya = "0823"
+
+                )
+                TampilData(
+                    judul = "alamat",
+                    isinya = "Margorukun"
 
                 )
             }
-            TampilData(
-                judul = "Email",
-                isinya = "@ibal.com"
 
-            )
         }
 
 
